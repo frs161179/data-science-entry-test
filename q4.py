@@ -1,17 +1,19 @@
 def string_reverse(s):
-    if isinstance(s, str):
+    if isinstance(s, str): #s must be a string
         #print(len(s))
         i = 0
         s_rev = ''
         length = len(s)
         while i < length:
-            s_rev = s_rev + s[length - i - 1]
+            s_rev = s_rev + s[length - i - 1] #reverses a given string
             i+=1
-        print('Original string: '+s)
-        print('String reverse : '+s_rev)
+        #Return the reversed string.
+        return 'Original string: '+s+ '\nString reverse : '+s_rev
     else:
-        print('Input must be string')
+        return 'Input must be string'
 
-string_reverse("Hello World")
-string_reverse("Python")
+print(string_reverse("Hello World"))
+print(string_reverse("Python"))
+
+
 

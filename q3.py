@@ -1,19 +1,22 @@
 def update_dictionary(dct, key, value):
-    if isinstance(dct, dict):
+    if isinstance(dct, dict): #input must be dictionary
         #print(len(dct))
-        if len(dct) <= 0:
+        if len(dct) <= 0: #if empty dictionary, add value
             dct.update({key: value})
         else:
             for x, y in dct.items():
-                if x == key:
+                if x == key: #If the key already exists in dct, print the original value, then update its value.
                     print('Original value: '+x,y)
                     dct.update({key:value})
-        print(dct)
+        return dct #Return the updated dictionary.
     else:
         print('Not a dictionary')
+        return None
 
-update_dictionary({}, "name", "Alice")
-update_dictionary({"age": 25}, "age", 26)
+print(update_dictionary({}, "name", "Alice"))
+print(update_dictionary({"age": 25}, "age", 26))
+
+
 
 
 
